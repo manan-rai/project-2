@@ -1,0 +1,778 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap");
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: "Jost", sans-serif;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+img {
+  vertical-align: middle;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.sec-padding-bottom {
+  padding-bottom: 100px;
+}
+.sec-padding-top {
+  padding-top: 100px;
+}
+.btn {
+  color: $white;
+  font-weight: 500;
+  font-size: 19px;
+}
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+h4 {
+  font-weight: 600;
+  font-size: 19px;
+  color: $dark2;
+}
+h6 {
+  color: $slogan-color;
+  font-size: 20px;
+  font-weight: 600;
+}
+h5 {
+  font-weight: 700;
+  font-size: 18px;
+  color: $dark2;
+}
+.paragraph {
+  color: $dark3;
+  font-weight: 500;
+  font-size: 17px;
+}
+.heading_paragraph {
+  color: $white;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* header */
+header {
+  background-color: #2d7076;
+  .sub-menu {
+    font-weight: 600;
+    font-size: 14px;
+    color: $white;
+    .fa-solid {
+      font-size: 10px;
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      .fa-brands {
+        color: $white;
+        &:hover {
+          color: $slogan-color;
+        }
+      }
+    }
+  }
+}
+.btn {
+  color: $main-color;
+  padding: 10px 25px;
+  border: 2px solid $main-color;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $main-color;
+    color: $white;
+    transform: translateY(-8px);
+  }
+}
+.appointment-btn {
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 0;
+  padding: 18px 35px;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: $slogan-color;
+    color: $white;
+    transform: translateY(-5px);
+  }
+}
+.card-link {
+  margin: 1px;
+  .fa-brands {
+    background-color: #8b837e;
+    color: $white;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $slogan-color;
+      transform: translateY(-6px);
+    }
+  }
+}
+
+// top section
+
+.banner {
+  background-image: url(/images/home-banner-img.jpg);
+  background-color: $white;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 200px;
+ 
+  .navbar-nav {
+    .nav-link {
+      color: $white;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0 20px;
+      position: relative;
+      text-transform: capitalize;
+    }
+    .nav-hov {
+      &:hover {
+        color: $slogan-color;
+      }
+      &::before {
+        content: "";
+        background-color: $slogan-color;
+        height: 2px;
+        width: 0;
+        position: absolute;
+        // transition: 0.1s;
+        bottom: 0px;
+        left: 21px;
+        display: inline-block;
+      }
+      &:hover::before {
+        width: 15px;
+      }
+    }
+    .nav-btn {
+      display: inline-block;
+      cursor: pointer;
+      .nav-link {
+        transition: all 0.5s ease;
+        border: 2px solid $white;
+        padding: 10px;
+        &:hover {
+          color: $main-color;
+          background-color: $white;
+        }
+      }
+    }
+  }
+  .banner-content {
+    .banner-inner1 {
+      h1 {
+        color: $white;
+        font-weight: 700;
+        margin-bottom: 30px;
+        
+      }
+     
+    }
+    .banner-inner2 {
+      position: relative;
+      img{
+        width: 100%;
+      }
+      .image-detail {
+        position: absolute;
+        bottom: 50px;
+        right: 70px;
+        background-color: $white;
+        padding: 10px;
+        border-radius: 8px;
+        h3 {
+          font-size: 19px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 2px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+/*contact us section*/
+.contact_us_section {
+  position: relative;
+  background-color: rgb(240, 246, 246);
+  .arrow_icon {
+    .fa-solid {
+      height: 60px;
+      width: 60px;
+      display: flex;
+      justify-content: space-evenly;
+      line-height: 60px;
+      background-color: $secondary-color;
+      color: $white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: -35px;
+    }
+  }
+  .content_inner {
+    .experience {
+      span {
+        font-size: 100px;
+        color: $main-color;
+        font-weight: 700;
+        position: relative;
+        sup {
+          color: $slogan-color;
+          position: absolute;
+          top: 8px;
+        }
+      }
+      h5 {
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 7px;
+      }
+    }
+    .video_img {
+      position: relative;
+      img {
+        width: 100%;
+      }
+    }
+    .image_inner {
+      position: absolute;
+      bottom: 20px;
+      left: 35px;
+      width: 140px;
+      a {
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+        color: $white;
+        .fa-brands {
+          font-size: 45px;
+        }
+        span {
+          font-size: 19px;
+          font-weight: 600;
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+  .contact_info {
+    h4 {
+      padding: 60px 0 20px;
+    }
+  }
+  .buttom {
+    margin-top: 40px;
+  }
+}
+
+// schedule section
+.schedule_section {
+  .schedule_heading {
+    text-align: center;
+  }
+  .schedule_content {
+    .schedule_card {
+      padding: 5px 0;
+      position: relative;
+      border: none;
+      max-width: 300px;
+      transition: all 0.1s ease;
+      margin-bottom: 60px;
+      span {
+        position: absolute;
+        left: 7px;
+        top: -25px;
+        height: 40px;
+        width: 40px;
+        background-color: rgb(191, 192, 191);
+        color: $white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+      }
+      img {
+        padding-bottom: 10px;
+        filter: saturate(0%);
+      }
+      p {
+        min-width: 100%;
+        text-align: center;
+      }
+      .paragraph {
+        &::after {
+          content: "";
+          background-color: $slogan-color;
+          height: 4px;
+          width: 0;
+          position: absolute;
+          left: 35%;
+          bottom: -15px;
+        }
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+      &:hover h5 {
+        color: $slogan-color;
+      }
+      &:hover img {
+        filter: saturate(100%);
+      }
+      &:hover span {
+        background-color: $slogan-color;
+      }
+      &:hover .paragraph::after {
+        width: 25%;
+      }
+    }
+  }
+}
+
+// fun fact start
+
+.fun_fact_section {
+  background-image: url(/images/home-info-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .fun_fact_heading {
+    padding-bottom: 20px;
+    h3 {
+      color: $white;
+      padding-bottom: 8px;
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .fun_fact_item {
+    height: auto;
+    .fun_fact_info {
+      background-color: $white;
+      height: 180px;
+      h1 {
+        font-weight: 700;
+        font-size: 50px;
+        position: relative;
+        color: $main-color;
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $secondary-color;
+          height: 4px;
+          width: 100%;
+          bottom: -73px;
+          left: 9%;
+        }
+
+        span {
+          position: absolute;
+          top: -15px;
+          font-size: 25px;
+        }
+      }
+      p {
+        text-transform: capitalize;
+        line-height: 2px;
+      }
+      &:hover h1 {
+        color: $slogan-color;
+      }
+      &:hover h1::after {
+        background-color: $slogan-color;
+      }
+    }
+  }
+  .fun_fact_image {
+    margin-left: 60px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// get in touch
+
+.get_in_touch_section {
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .get_in_touch_heading {
+    h3 {
+      padding: 5px 0px 10px;
+    }
+    .get_in_touch_items {
+      h4 {
+        ul {
+          li {
+            padding: 7px 0px;
+            position: relative;
+            &::before {
+              content: "";
+              height: 10px;
+              width: 10px;
+              background-color: $slogan-color;
+              position: absolute;
+              border-radius: 50%;
+              top: 35%;
+              left: -20px;
+            }
+          }
+        }
+      }
+    }
+    .get_in_touch_btn {
+      padding-top: 10px;
+    }
+  }
+  .get_in_touch_image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// appointment section
+.appointment_section {
+  background-image: url(/images/home-info-banner.jpg);
+
+  .appointment_section_top {
+    background-color: $secondary-color;
+    border-top: 10px solid $main-color;
+    margin-top: -200px;
+  }
+  .benefits_heading {
+    margin-top: 130px;
+    h6 {
+      color: $white;
+      padding-bottom: 20px;
+    }
+    h3 {
+      color: $white;
+      font-size: 40px;
+    }
+  }
+  .benefits_items {
+    margin-top: 40px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        display: inline-block;
+        margin-bottom: 6px;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        .benefit_icon {
+          background-color: $main-color;
+          margin: 0px 20px;
+          padding: 60px;
+          border-radius: 50%;
+        }
+        .benefit_text {
+          text-align: center;
+          margin-top: 15px;
+          text-transform: capitalize;
+          font-size: 18px;
+          font-weight: 700;
+          color: $main-color;
+        }
+        &:hover .benefit_icon {
+          background-color: $white;
+          border: 5px solid $secondary-color;
+          box-shadow: 5px 5px 40px $dark2;
+        }
+        &:hover .benefit_icon img {
+          filter: invert(67%) sepia(56%) saturate(6457%) hue-rotate(154deg)
+            brightness(95%) contrast(82%);
+        }
+        &:hover .benefit_text {
+          color: $white;
+        }
+      }
+    }
+  }
+  .appointment_section_bottom {
+    .bottom_header {
+      h3 {
+        color: $white;
+        margin-top: 6px;
+        margin-bottom: 15px;
+      }
+    }
+    .appointment_form {
+      .form_inner_wrapper {
+        width: calc(50% );
+        float: left;
+        padding: 0 5px;
+        margin: 15px 0;
+        .form-select {
+          font-size: 15px;
+          font-weight: 500;
+          border-radius: 0;
+        }
+        input {
+          width: 100%;
+          padding: 20px;
+          font-weight: 700;
+        }
+      }
+      .form_inner_wrapper2 {
+        width: calc((100% / 3));
+        float: left;
+        margin: 15px 0;
+        padding: 0 5px;
+        input {
+          width: 100%;
+          padding: 20px;
+          font-weight: 700;
+          color: $dark3;
+        }
+      }
+    }
+    .btn {
+      display: block;
+      margin: auto;
+    }
+    .department {
+      position: relative;
+      &::before {
+        content: "Department";
+        padding: 5px;
+        position: absolute;
+        background-color: $slogan-color;
+        top: -31px;
+        left: 40px;
+        color: $white;
+      }
+    }
+  }
+}
+
+// doctor info section
+.doctor_info {
+  .card {
+    border: 1px solid #eeeeee;
+    border-radius: 50px 0px 0px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    .card-body {
+      .card-title {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      h4 {
+        font-size: 14px;
+        font-weight: 700;
+        padding-bottom: 10px;
+      }
+    }
+    &::after {
+      content: "";
+      height: 4px;
+      width: 0;
+      background-color: $slogan-color;
+      position: absolute;
+      bottom: 0px;
+      left: 40%;
+    }
+    &:hover {
+      transform: translateY(-20px);
+    }
+    &:hover h5 {
+      color: $slogan-color;
+    }
+    &:hover::after {
+      width: 20%;
+    }
+  }
+}
+.doctor_info .social_link{
+  display: flex;
+  justify-content: space-between;
+}
+
+// timetable section
+.timetable_section {
+  background-image: url(/images/time-table-banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .calender_img {
+    img {
+      transition: all 0.4s ease;
+      &:hover {
+        transform: translateY(-15px);
+      }
+    }
+  }
+  .timetable_info {
+    h3 {
+      color: $white;
+      padding-bottom: 12px;
+      a {
+        color: $slogan-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// cards section
+
+.card_section {
+  padding: 65px 0 49px;
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+      padding: 10px 20px;
+    }
+  }
+}
+
+// footer section
+footer {
+  background-color: rgb(240, 246, 246);
+  .fa-solid{
+    color: $slogan-color;
+    margin-right: 5px;
+  }
+  span{
+    color: $slogan-color;
+    font-weight: 700;
+    margin-right: 4px;
+    font-size: 15px;
+  }
+  h6{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    &::before{
+      content: "";
+      background-color: $slogan-color;
+      height: 2px;
+      width: 30px;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}
+
+// copyright 
+.copyright_footer{
+  background-image: url(/images/home-banner-img.jpg);
+  background-size: cover;
+  
+  p{
+    color: $white;
+    font-size: 14px;
+  }
+}
+
+
+// responsive
+@media(max-width:991px){
+  .banner .navbar-nav .nav-link{
+    padding: 10px 0;
+  }
+  .banner-inner1{
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .heading{
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .get_in_touch_section .get_in_touch_heading .get_in_touch_items h4 ul li{
+    display: flex;
+    
+  }
+  .appointment_form{
+    display: flex;
+  }
+  .main_card{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  
+}
+
+@media(max-width:767px){
+  .appointment_section .appointment_section_bottom .appointment_form .form_inner_wrapper{
+    width: 100%;
+  }
+}
+
+@media(max-width:575px){
+  .sec-padding-bottom{
+    padding-bottom: 60px;
+  }
+  .sec-padding-top{
+    padding-top: 60px;
+  }
+  .banner{
+    padding-bottom: 100px;
+  }
+.experience{
+  text-align: center;
+}
+.contact_us_section .buttom{
+  text-align: center;
+}
+  .appointment_section .appointment_section_bottom .appointment_form .form_inner_wrapper2{
+width: 100%;
+  }
+  
+  .appointment_form ul{
+    padding: 0;
+    margin: 0;
+  }
+  .benefits_items ul{
+    padding: 0;
+    margin: 0;
+  }
+  .get_in_touch_section .get_in_touch_heading .get_in_touch_items h4 ul li{
+    display: flex;
+    text-align: start;
+  }
+  
+}
