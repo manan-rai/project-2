@@ -153,7 +153,7 @@ header ul li .fa-brands:hover {
 }
 
 .banner {
-  background-image: url(/images/home-banner-img.jpg);
+  background-image: url(../images/home-banner-img.jpg);
   background-color: white;
   background-size: cover;
   background-position: center;
@@ -352,7 +352,7 @@ header ul li .fa-brands:hover {
 }
 
 .fun_fact_section {
-  background-image: url(/images/home-info-banner.jpg);
+  background-image: url(../images/home-info-banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -444,7 +444,7 @@ header ul li .fa-brands:hover {
 }
 
 .appointment_section {
-  background-image: url(/images/home-info-banner.jpg);
+  background-image: url(../images/home-info-banner.jpg);
 }
 .appointment_section .appointment_section_top {
   background-color: #4bc1a8;
@@ -610,7 +610,7 @@ header ul li .fa-brands:hover {
 }
 
 .timetable_section {
-  background-image: url(/images/time-table-banner.png);
+  background-image: url(../images/time-table-banner.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -670,7 +670,7 @@ footer h6::before {
 }
 
 .copyright_footer {
-  background-image: url(/images/home-banner-img.jpg);
+  background-image: url(../images/home-banner-img.jpg);
   background-size: cover;
 }
 .copyright_footer p {
